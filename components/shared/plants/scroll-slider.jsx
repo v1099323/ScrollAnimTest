@@ -7,7 +7,7 @@ import { Container } from '../container'
 
 import { Plants } from './plants'
 
-export const ScrollSlider = () => {
+export const ScrollSlider = ({ position }) => {
 	const targetRef = useRef(null)
 	const plantsRef = useRef(null)
 	const [plantsWidth, setPlantsWidth] = useState(0)
@@ -23,6 +23,7 @@ export const ScrollSlider = () => {
 			)
 		}
 	}, [])
+	console.log(position)
 
 	const xScroll = useTransform(
 		scrollYProgress,
@@ -35,7 +36,7 @@ export const ScrollSlider = () => {
 			<div className='py-[3.75rem] flex sticky top-0 left-0 overflow-hidden'>
 				<Container>
 					<div className='flex flex-wrap items-center gap-5 justify-between mb-[3.75rem]'>
-						<h2 className='text-7xl font-extrabold max-lg:text-4xl w-0'>
+						<h2 className='text-7xl font-extrabold max-lg:text-4xl'>
 							New Plants
 						</h2>
 						<p className='text-base max-w-[800px] max-sm:hidden'>
@@ -47,7 +48,7 @@ export const ScrollSlider = () => {
 					</div>
 
 					<motion.div style={{ x: xScroll }} ref={plantsRef}>
-						<Plants />
+						<Plants position={position} />
 					</motion.div>
 				</Container>
 			</div>

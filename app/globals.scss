@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	scroll-behavior: smooth;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100svh;
-}
-
-body {
-	overflow-x: hidden;
-	scroll-behavior: smooth;
 }
 
 main {

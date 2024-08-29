@@ -1,4 +1,5 @@
 import { PlantItem } from './plant-item'
+import { cn } from '@/lib/utils'
 
 const PLANTS = [
 	{
@@ -41,7 +42,7 @@ const PLANTS = [
 
 export const Plants = () => {
 	return (
-		<div className='flex items-center gap-[1.875rem] max-md:gap-[0.9375rem]'>
+		<div className={'flex gap-[1.875rem] max-md:gap-[0.9375rem]'}>
 			{PLANTS.map((plant, index) => (
 				<PlantItem
 					key={index}
