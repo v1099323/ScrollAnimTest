@@ -18,7 +18,7 @@ export const ScrollSlider = () => {
 	const xScroll = useTransform(scrollYProgress, [0, 1], ['1%', '-100%'])
 	return (
 		<div className='min-h-[250svh] relative' ref={targetref}>
-			<div className='py-[3.75rem] flex sticky top-0 left-0'>
+			<div className='py-[3.75rem] flex sticky top-0 left-0 overflow-hidden'>
 				<Container>
 					<div className='flex flex-wrap items-center gap-5 justify-between mb-[3.75rem]'>
 						<h2 className='text-7xl font-extrabold max-lg:text-4xl'>
