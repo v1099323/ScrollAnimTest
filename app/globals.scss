@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100svh;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+	flex: 1;
+}
+
+.dollar {
+	&::before {
+		content: '$';
+		font-weight: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+	}
+}
